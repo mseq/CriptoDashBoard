@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="CriptoDashBoard.KeysPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CriptoDashBoard"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Binance Keys" Grid.Row="0" Grid.Column="0" FontSize="30" HorizontalAlignment="left" VerticalAlignment="Center"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="API Key" Grid.Column="0" Grid.Row="0" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,5,5,5"/>
+            <PasswordBox Name="ApiKeyTextBox" Width="540" Height="32" FontSize="14" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="left" PasswordChanged="ApiKeyTextBox_PasswordChanged"/>
+
+            <TextBlock Text="API Secret" Grid.Column="0" Grid.Row="1" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,5,5,5"/>
+            <PasswordBox Name="ApiSecretTextBox" Width="540" Height="32" FontSize="14" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="left" PasswordChanged="ApiSecretTextBox_PasswordChanged"/>
+
+        </Grid>
+        <TextBlock Text="If you enjoy this software, consider donations. It will help me keep adding new features to it."
+                   Grid.Row="1" VerticalAlignment="Bottom" Margin="5,5,5,30" HorizontalAlignment="Left" FontSize="12"/>
+        <TextBlock Text="BTC: bc1q07slwycwulfrmzpmgdw8tgfx4e3f2zt90w6aux"
+                   Grid.Row="1" VerticalAlignment="Bottom" Margin="5,5,5,5" HorizontalAlignment="Left" FontSize="12"/>
+    </Grid>
+</Page>

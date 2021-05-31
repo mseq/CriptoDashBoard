@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="CriptoDashBoard.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CriptoDashBoard"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <NavigationView PaneDisplayMode="Auto" x:Name="NavView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" Loaded="NavView_Loaded" ItemInvoked="NavView_ItemInvoked">
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:Uid="HomeNavItem" Content="Summary" Tag="summary">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE10F;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItemHeader Content="Binance Trades"/>
+                <NavigationViewItem x:Uid="PositionsNavItem" Icon="List" Content="On Going Positions" Tag="positions"/>
+                <NavigationViewItem x:Uid="OrdersNavItem" Icon="PreviewLink" Content="Active Orders" Tag="orders"/>
+                <NavigationViewItem x:Uid="LogNavItem" Icon="Bullets" Content="Results Log" Tag="log"/>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItemHeader Content="Configurations"/>
+                <NavigationViewItem x:Uid="MonPairsNavItem" Icon="Video" Content="Monitored Pairs" Tag="pairs"/>
+                <NavigationViewItem x:Uid="StructNavItem" Icon="Stop" Content="Automated Stops" Tag="autostops"/>
+                <NavigationViewItem x:Uid="KeysNavItem" Icon="Keyboard" Content="Binance Keys" Tag="keys"/>
+            </NavigationView.MenuItems>
+            <Frame x:Name="ContentFrame" Margin="20">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition/>
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
+        </NavigationView>
+    </Grid>
+</Page>
